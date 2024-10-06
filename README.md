@@ -1,1 +1,1 @@
-# rust-prob
+# rust-workshop
