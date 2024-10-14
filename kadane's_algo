@@ -1,0 +1,15 @@
+use std::cmp::max;
+
+fn main() {
+    let arr = [-2, -3, 4, -1, -2, 1, 5, -3];
+    let mut max_sum:i32 = i32::MIN;
+    let mut current_max:i32 = 0;
+    for i in 0..arr.len(){
+        current_max += arr[i];
+        max_sum = max(max_sum, current_max);
+        if current_max < 0{
+            current_max = 0;
+        }
+    }
+    println!("Maximum contiguous sum is {}", max_sum);
+}
